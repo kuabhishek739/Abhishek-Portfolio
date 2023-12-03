@@ -114,7 +114,7 @@ function Header() {
                     </VStack>
                     <Box
                         mr={{ lg: "20" }}
-                        ml={"12"}
+                        ml={{base:"20"}}
                         p={4}
                         maxW={"60%"}
                         textAlign={"center"}
