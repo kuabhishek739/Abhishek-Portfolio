@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react'
 import darkbackground from '../assets/dark-background.png'
 import lightbackground from '../assets/light-background.png'
 import LordIconComponent from './LordIconComponent';
-
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function Header() {
 
@@ -127,9 +127,11 @@ function Header() {
                         </Text>
                         <br />
                         <Text fontSize={{ base: "l", md: "l", lg: "xl" }}>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</Text>
-                        <Button
-                            mt={8} bg={"#7B66FF"}
-                        >Contact Me</Button>
+                        <AnchorLink href="#contact">
+                            <Button
+                                mt={8} bg={"#7B66FF"}
+                            >Contact Me</Button>
+                        </AnchorLink>
                     </Box>
                 </Box>
                 <Box mt={"10%"}>

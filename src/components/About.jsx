@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Box, Text } from '@chakra-ui/react';
 import { useColorMode } from '@chakra-ui/color-mode'
-
+import AnchorLink from "react-anchor-link-smooth-scroll";
 const About = () => {
     const { colorMode } = useColorMode();
     const bgColor = colorMode === 'dark' ? "#2c2c2c" : "#cecece";
@@ -43,9 +43,11 @@ const About = () => {
                     <Text
                         fontSize={{ sm: "l", md: "l", lg: "xl" }}
                     >I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.</Text>
-                    <Button
-                        mt={8} bg={"#7B66FF"}
-                    >Contact Me</Button>
+                    <AnchorLink href="#contact">
+                        <Button
+                            mt={8} bg={"#7B66FF"}
+                        >Contact Me</Button>
+                    </AnchorLink>
                 </Box>
             </Box>
         </section >
