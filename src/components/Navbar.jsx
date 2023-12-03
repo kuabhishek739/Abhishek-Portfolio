@@ -14,31 +14,12 @@ import {
 } from '@chakra-ui/react';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from '@chakra-ui/icons';
-import { Link } from 'react-router-dom';
 import myImg from '../assets/Image1.png';
 
-const NavLink = ({ to, children, onClick }) => (
-    <Text
-        as={to ? Link : 'button'}
-        to={to}
-        p={2}
-        fontWeight={"bold"}
-        color="96EFFF"
-        _hover={{
-            textDecoration: 'none',
-            borderBottom: '2px',
-            borderColor: 'white',
-        }}
-        cursor="pointer"
-        onClick={onClick}
-
-    >
-        {children}
-    </Text>
-);
-
 const handleResumeDownload = () => {
-    const googleDriveFileUrl = 'https://drive.google.com/file/d/1suN9K_D_y0yaUe20Rpgu4Ph_OuLstZZJ/view?usp=drive_link';
+    const googleDriveFileDirectDownloadUrl = 'https://drive.usercontent.google.com/download?id=17A0m-yflqKYoeqj52id5u_OIoONKSIeQ&export=download&authuser=0&confirm=t&uuid=46942857-037d-4dd2-b3db-72e291fe3cf8&at=APZUnTWwKPe7M3OzvQRtrrvqQqib:1701627501437';
+    window.location.href = googleDriveFileDirectDownloadUrl;
+    const googleDriveFileUrl = 'https://drive.google.com/file/d/17A0m-yflqKYoeqj52id5u_OIoONKSIeQ/view?usp=drive_link';
     window.open(googleDriveFileUrl, '_blank');
 };
 const Navbar = () => {
