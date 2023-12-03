@@ -39,15 +39,17 @@ const Projects = () => {
           <Slider {...settings}>
             <Box
               key='myHours'
-              border='2px'
               borderColor='gray.200'
               margin={"auto"}
               display="flex"
               flexDirection="column"
               alignItems="center"
+              maxW={{ base: "100%", md: "80%", lg: "80%" }}
             >
               <Image src={myhrs} alt='MyHours' />
+              <br />
               <Text fontWeight={"bold"} fontSize={"2xl"}>MyHours</Text>
+              <Text>I developed a replica of the <a href='https://myhours.com/'>https://myhours.com/</a> website using React and Chakra UI, mimicking its functionalities and design elements. The project involved recreating the site's features and aesthetics using modern web technologies like React and the Chakra UI library.</Text>
               <Flex justify={"center"}>
                 <Link href='https://myhours-swart.vercel.app/'>
                   <Button mt={8} mb={8} mr={8} bg={"#7B66FF"}>Visit Site</Button>
@@ -60,15 +62,18 @@ const Projects = () => {
 
             <Box
               key='superHeroResume'
-              border='2px'
               borderColor='gray.200'
               margin={"auto"}
               display="flex"
               flexDirection="column"
               alignItems="center"
+              maxW={{ base: "100%", md: "80%", lg: "80%" }}
             >
               <Image src={superheroresume} alt='superheroresume' />
+              <br />
               <Text fontWeight={"bold"} fontSize={"2xl"}>Super Hero Resume</Text>
+              <Text>
+                I crafted a resume portraying the superhero Captain America, incorporating his unique traits and achievements into the design elements. This project showcases Captain America's professional background and characteristics through a creatively designed, HTML/CSS-based single-page resume.</Text>
               <Flex justify={"center"}>
                 <Link href='https://glittering-brigadeiros-18cbcc.netlify.app/'>
                   <Button mt={8} mb={8} mr={8} bg={"#7B66FF"}>Visit Site</Button>
