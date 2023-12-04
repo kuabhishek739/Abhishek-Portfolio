@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from '@chakra-ui/icons';
-import myImg from '../assets/Image1.png';
+import myImg from '../assets/Image1.jpeg';
 
 const handleResumeDownload = () => {
     const googleDriveFileDirectDownloadUrl = 'https://drive.usercontent.google.com/download?id=17A0m-yflqKYoeqj52id5u_OIoONKSIeQ&export=download&authuser=0&confirm=t&uuid=46942857-037d-4dd2-b3db-72e291fe3cf8&at=APZUnTWwKPe7M3OzvQRtrrvqQqib:1701627501437';
