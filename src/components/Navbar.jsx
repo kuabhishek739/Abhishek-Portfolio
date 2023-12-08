@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
     Box,
     Flex,
@@ -24,25 +24,42 @@ const handleResumeDownload = () => {
 };
 const Navbar = () => {
     const { isOpen, onToggle } = useDisclosure();
+    const [isBoxExpanded, setIsBoxExpanded] = useState(false);
     const { colorMode, toggleColorMode } = useColorMode();
+    const toggleBox = () => {
+        setIsBoxExpanded(!isBoxExpanded);
+      };
+
     return (
         <Flex bg="#7B66FF" p={4} align="center" position="sticky" top={0} zIndex="sticky">
             <Image _hover={{ transform: "scale(1.1)" }} src={myImg} w={{ base: "10%", lg: "4%" }} h={"4%"} borderRadius={"full"} mr={4}></Image>
-            <Text fontSize="xl" fontWeight="bold" mr={4} _hover={{ transform: "scale(1.1)" }} display={{ base: 'none', sm: 'block',md: 'block' }}>
+            <Text fontSize="xl" fontWeight="bold" mr={4} _hover={{ transform: "scale(1.1)" }} display={{ base: 'none', sm: 'block', md: 'block' }}>
                 ABHISHEK
             </Text>
             <Box display={{ base: 'block', md: 'none' }}>
                 <IconButton
                     icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-                    onClick={onToggle}
+                    onClick={() => {
+                        onToggle();
+                        toggleBox();
+                      }}
                     variant="ghost"
                     size="md"
                     aria-label="Toggle Navigation"
                 />
             </Box>
-            <Box display={{ base: isOpen ? 'block' : 'none', md: 'block' }}>
-                <Collapse in={isOpen} animateOpacity>
-                    <VStack spacing={4} align="stretch" mt={{ base: 4, md: 0 }} fontWeight={'bold'}>
+            <Box
+            display={isBoxExpanded ? 'block' : 'none'}
+            position="absolute"
+            top="100%"
+            bg="#7B66FF"
+            ml={{ base: 1, md: 0 }}
+            left={0}
+            width="40%"
+            boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
+            zIndex={1} >
+                <Collapse in={isBoxExpanded} animateOpacity>
+                    <VStack spacing={4} align="stretch" textAlign={"center"} mt={{ base: 4, md: 0 }} fontWeight={'bold'}>
                         <AnchorLink href="#header">
                             <Text p={2}
                                 fontWeight={"bold"}

@@ -30,7 +30,7 @@ const Skills = () => {
                         my={3}
                         mx={2}
                         border='2px' borderColor='gray.400'
-                        margin={"auto"}
+                        margin={{base: "10px", md:"auto"}}
                         display="flex"
                         flexDirection="column"
                         alignItems="center"
@@ -44,7 +44,7 @@ const Skills = () => {
                         my={3}
                         mx={2}
                         border='2px' borderColor='gray.400'
-                        margin={"auto"}
+                        margin={{base: "10px", md:"auto"}}
                         display="flex"
                         flexDirection="column"
                         alignItems="center"
@@ -58,7 +58,7 @@ const Skills = () => {
                         my={3}
                         mx={2}
                         border='2px' borderColor='gray.400'
-                        margin={"auto"}
+                        margin={{base: "10px", md:"auto"}}
                         display="flex"
                         flexDirection="column"
                         alignItems="center"
@@ -72,7 +72,7 @@ const Skills = () => {
                         my={3}
                         mx={2}
                         border='2px' borderColor='gray.400'
-                        margin={"auto"}
+                        margin={{base: "10px", md:"auto"}}
                         display="flex"
                         flexDirection="column"
                         alignItems="center"
@@ -86,7 +86,7 @@ const Skills = () => {
                         my={3}
                         mx={2}
                         border='2px' borderColor='gray.400'
-                        margin={"auto"}
+                        margin={{base: "10px", md:"auto"}}
                         display="flex"
                         flexDirection="column"
                         alignItems="center"
@@ -100,7 +100,7 @@ const Skills = () => {
                         my={3}
                         mx={2}
                         border='2px' borderColor='gray.400'
-                        margin={"auto"}
+                        margin={{base: "10px", md:"auto"}}
                         display="flex"
                         flexDirection="column"
                         alignItems="center"
