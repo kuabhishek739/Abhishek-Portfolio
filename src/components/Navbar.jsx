@@ -51,8 +51,9 @@ const Navbar = () => {
             <Box
             display={isBoxExpanded ? 'block' : 'none'}
             position="absolute"
-            top="100%"
+            top="105%"
             bg="#7B66FF"
+            borderBottomRadius = "5px"
             ml={{ base: 1, md: 0 }}
             left={0}
             width="40%"
