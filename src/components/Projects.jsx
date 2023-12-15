@@ -51,7 +51,7 @@ const Projects = () => {
               <Text fontWeight={"bold"} fontSize={"2xl"}>MyHours</Text>
               <Text>I developed a replica of the <a href='https://myhours.com/'>https://myhours.com/</a> website using React and Chakra UI, mimicking its functionalities and design elements. The project involved recreating the site's features and aesthetics using modern web technologies like React and the Chakra UI library.</Text>
               <Flex justify={"center"}>
-                <Link href='https://myhours-swart.vercel.app/'>
+                <Link href='https://my-projects-dcsb.vercel.app/'>
                   <Button mt={8} mb={8} mr={8} bg={"#7B66FF"}>Visit Site</Button>
                 </Link>
                 <Link href='https://github.com/kuabhishek739/My-Projects/tree/main/myhours'>
