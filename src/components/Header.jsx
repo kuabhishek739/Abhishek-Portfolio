@@ -53,7 +53,7 @@ function Header() {
 
                 }}
                 minW={"100%"}
-                minH={"100%"}
+                minH={"100vh"}
                 pb={100}
                 alignItems="center"
                 justifyContent="center"
