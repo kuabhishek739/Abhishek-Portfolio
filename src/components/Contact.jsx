@@ -11,25 +11,20 @@ import {
 } from '@chakra-ui/react'
 import { useColorMode } from '@chakra-ui/color-mode'
 import React from 'react'
-import darkbackground from '../assets/dark-background.png'
-import lightbackground from '../assets/light-background.png'
 const Contact = () => {
     const { colorMode } = useColorMode();
-    const isDark = colorMode === "dark";
-    const backgroundImage = isDark ? `url(${darkbackground})` : `url(${lightbackground})`;
+    const bgColor = colorMode === 'dark' ? "#3d3d3d" : "#ffffff";
+
     return (
         <section id='contact'>
             <Box
-                minH={'100vh'}
+                minH={'100%'}
                 align={'center'}
                 justify={'space-around'}
                 pt={50}
-                pb={100}
-                style={{
-                    backgroundImage: backgroundImage,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
-                }}>
+                pb={{ base: "50", md: "100" }}
+                bgColor={bgColor}
+            >
                 <Box>
                     <Text
                         fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}

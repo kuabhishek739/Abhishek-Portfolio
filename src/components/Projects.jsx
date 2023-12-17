@@ -3,8 +3,8 @@ import { Box, Text, Image, Link, Button, Flex } from '@chakra-ui/react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import myhrs from '../assets/myhrs.png';
-import superheroresume from '../assets/superheroresume.png';
+import myhrs from '../assets/myhrs.Webp';
+import superheroresume from '../assets/superheroresume.Webp';
 import { useColorMode } from '@chakra-ui/color-mode'
 
 const Projects = () => {

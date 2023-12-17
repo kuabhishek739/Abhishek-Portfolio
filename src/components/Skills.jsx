@@ -18,7 +18,7 @@ const Skills = () => {
         flexDirection: 'column',
         alignItems: 'center',
         _hover: {
-            transform: 'scale(1.1)'
+            transform: 'scale(1.01)'
         },
         justifyContent: 'center'
     };

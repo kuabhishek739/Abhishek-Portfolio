@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
     Box,
     Flex,
@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from '@chakra-ui/icons';
-import myImg from '../assets/Image1.jpeg';
+import myImg from '../assets/Image.Webp';
 
 const handleResumeDownload = () => {
     const googleDriveFileDirectDownloadUrl = 'https://drive.usercontent.google.com/download?id=17A0m-yflqKYoeqj52id5u_OIoONKSIeQ&export=download&authuser=0&confirm=t&uuid=46942857-037d-4dd2-b3db-72e291fe3cf8&at=APZUnTWwKPe7M3OzvQRtrrvqQqib:1701627501437';
@@ -28,37 +28,43 @@ const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     const toggleBox = () => {
         setIsBoxExpanded(!isBoxExpanded);
-      };
+    };
 
     return (
         <Flex bg="#7B66FF" p={4} align="center" position="sticky" top={0} zIndex="sticky">
-            <Image _hover={{ transform: "scale(1.1)" }} src={myImg} w={{ base: "10%", lg: "4%" }} h={"4%"} borderRadius={"full"} mr={4}></Image>
-            <Text fontSize="xl" fontWeight="bold" mr={4} _hover={{ transform: "scale(1.1)" }} display={{ base: 'none', sm: 'block', md: 'block' }}>
+            <Box
+                w={{ base: "50px", md: "50px" }}
+                h={{ base: "50px", md: "50px" }}
+                borderRadius={"full"}
+                overflow={"hidden"}
+                bg={"white"}
+                mr={4}
+                _hover={{ transform: "scale(1.04)", cursor: "pointer" }} >
+                <Image src={myImg}></Image>
+            </Box>
+            <Text fontSize="xl" fontWeight="bold" mr={4} _hover={{ transform: "scale(1.1)", cursor: "pointer" }} display={{ base: 'none', sm: 'block', md: 'block' }}>
                 ABHISHEK
             </Text>
             <Box display={{ base: 'block', md: 'none' }}>
                 <IconButton
                     icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-                    onClick={() => {
-                        onToggle();
-                        toggleBox();
-                      }}
+                    onClick={toggleBox}
                     variant="ghost"
                     size="md"
                     aria-label="Toggle Navigation"
                 />
             </Box>
             <Box
-            display={isBoxExpanded ? 'block' : 'none'}
-            position="absolute"
-            top="105%"
-            bg="#7B66FF"
-            borderBottomRadius = "5px"
-            ml={{ base: 1, md: 0 }}
-            left={0}
-            width="40%"
-            boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
-            zIndex={1} >
+                display={isBoxExpanded ? 'block' : 'none'}
+                position="absolute"
+                top="105%"
+                bg="#7B66FF"
+                borderBottomRadius="5px"
+                ml={{ base: 1, md: 0 }}
+                left={0}
+                width="40%"
+                boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
+                zIndex={1} >
                 <Collapse in={isBoxExpanded} animateOpacity>
                     <VStack spacing={4} align="stretch" textAlign={"center"} mt={{ base: 4, md: 0 }} fontWeight={'bold'}>
                         <AnchorLink href="#header">
