@@ -16,7 +16,7 @@ const LordIconComponent = () => {
     <lord-icon
       src="https://cdn.lordicon.com/ffpklhrd.json"
       trigger="loop"
-      style={{ width: '100px', height: '100px' }}
+      style={{ width: '80px', height: '80px' }}
     />
   );
 };

@@ -13,7 +13,7 @@ import { useColorMode } from '@chakra-ui/color-mode'
 import React from 'react'
 const Contact = () => {
     const { colorMode } = useColorMode();
-    const bgColor = colorMode === 'dark' ? "#3d3d3d" : "#ffffff";
+    const bgColor = colorMode === 'dark' ? "#3d3d3d" : "#d5d5d5";
 
     return (
         <section id='contact'>
