@@ -97,7 +97,7 @@ const Projects = () => {
             >
               <Image src={jioClone} alt='jioClone' />
               <br />
-              <Text fontWeight={"bold"} fontSize={"2xl"}>Super Hero Resume</Text>
+              <Text fontWeight={"bold"} fontSize={"2xl"}>Jio Clone</Text>
               <Text>
               I replicated the frontend interface of Jio.com using React and Chakra UI, demonstrating a responsive and visually engaging website mirroring the original design.</Text>
               <Flex justify={"center"}>
