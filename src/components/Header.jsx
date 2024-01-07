@@ -6,42 +6,12 @@ import React, { useState, useEffect } from 'react'
 import LordIconComponent from './LordIconComponent';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import BgImage from '../assets/Vscode.Webp'
+import Typewriter from 'typewriter-effect';
 
 function Header() {
 
     const { colorMode } = useColorMode();
     const isDark = colorMode === "dark";
-    const [showCursor, setShowCursor] = useState(true);
-    const [textIndex, setTextIndex] = useState(0);
-    const [typingDirection, setTypingDirection] = useState('forward');
-    const textList = [" ", "A", "AB", "ABH", "ABHI", "ABHIS", "ABHISH", "ABHISHE", "ABHISHEK"];
-
-
-    useEffect(() => {
-        const cursorInterval = setInterval(() => {
-            setShowCursor((prev) => !prev);
-        }, 500);
-
-        return () => clearInterval(cursorInterval);
-    }, []);
-
-    useEffect(() => {
-        const typingEffect = setInterval(() => {
-            if (typingDirection === 'forward') {
-                setTextIndex((prev) => (prev === textList.length - 1 ? prev : prev + 1));
-                if (textIndex === textList.length - 1) {
-                    setTypingDirection('backward');
-                }
-            } else {
-                setTextIndex((prev) => (prev === 0 ? prev : prev - 1));
-                if (textIndex === 0) {
-                    setTypingDirection('forward');
-                }
-            }
-        }, 200);
-
-        return () => clearInterval(typingEffect);
-    }, [textIndex, textList.length, typingDirection]);
 
     return (
         <section id='header'>
@@ -127,8 +97,16 @@ function Header() {
                     >
                         <Text fontSize={{ base: "3xl", md: "3xl", lg: "5xl" }} color={"white"} fontWeight={"bold"}>HEY, I'M</Text>
                         <Text fontSize={{ base: "3xl", md: "3xl", lg: "5xl" }} color={"white"} fontWeight={"bold"}>
-                            {textList[textIndex]}
-                            <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+                            <Typewriter
+                                options={{
+                                    strings: ['ABHISHEK', 'CODER', 'WEB DEVELOPER'],
+                                    autoStart: true,
+                                    loop: true,
+                                    delay: 100,
+                                    deleteSpeed: 50,
+                                    writeSpeed: 50
+                                }}
+                            />
                         </Text>
                         <br />
                         <Text color={"white"} fontSize={{ base: "l", md: "l", lg: "xl" }}>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</Text>

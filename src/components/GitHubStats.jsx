@@ -1,11 +1,19 @@
 import { Box, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import GitHubCalendar from "react-github-calendar";
 import { useColorMode } from '@chakra-ui/react';
 
 export default function GithubCalender() {
   const { colorMode } = useColorMode();
+  const [refresh, setRefresh] = useState(true);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRefresh(!refresh); // Toggle the refresh state every 5 seconds
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [refresh]);
 
   const lightThemeURL =
     'https://github-readme-streak-stats.herokuapp.com/?user=kuabhishek739&theme=transparent&hide_border=true&title_color=black&text_color=black&sideNums=black&sideLabels=black&ring=black&fire=black&currStreakLabel=black&currStreakNum=black';
@@ -27,7 +35,7 @@ export default function GithubCalender() {
         <br />
       </Box>
       <Box
-        border="5px solid #7B66FF"
+        border="3px solid #7B66FF"
         borderTopLeftRadius="20px"
         borderBottomRightRadius="20px"
         overflow="hidden"
@@ -38,10 +46,11 @@ export default function GithubCalender() {
           className="react-activity-calendar"
           color="skyblue"
           username="kuabhishek739"
+          year={2023}
         />
       </Box>
       <Box
-        border="5px solid #7B66FF"
+        border="3px solid #7B66FF"
         borderTopLeftRadius="20px"
         borderBottomRightRadius="20px"
         overflow="hidden"
@@ -55,7 +64,7 @@ export default function GithubCalender() {
         />
       </Box>
       <Box
-        border="5px solid #7B66FF"
+        border="3px solid #7B66FF"
         borderTopLeftRadius="20px"
         borderBottomRightRadius="20px"
         overflow="hidden"
@@ -69,7 +78,7 @@ export default function GithubCalender() {
         />
       </Box>
       <Box
-        border="5px solid #7B66FF"
+        border="3px solid #7B66FF"
         borderTopLeftRadius="20px"
         borderBottomRightRadius="20px"
         overflow="hidden"
