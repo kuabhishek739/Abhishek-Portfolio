@@ -9,7 +9,6 @@ import {
     VStack,
     HStack,
     Text,
-    Collapse,
     useColorMode,
     Slide,
 } from '@chakra-ui/react';
@@ -222,7 +221,7 @@ const Navbar = () => {
                 onClick={toggleColorMode}
                 variant="ghost"
                 size="md"
-                _hover={{ bg: '#96EFFF' }}
+                _hover={{ bg: 'transparent' }}
             />
         </Flex>
     );

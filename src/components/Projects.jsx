@@ -5,9 +5,9 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useColorMode } from '@chakra-ui/color-mode';
 
-import myhrs from '../assets/myhrs.Webp';
-import superheroresume from '../assets/superheroresume.Webp';
-import jioClone from '../assets/Jio-Clone.webp';
+import myhrs from '../assets/Projects/myhrs.Webp';
+import superheroresume from '../assets/Projects/superheroresume.Webp';
+import jioClone from '../assets/Projects/Jio-Clone.webp';
 
 const projectsData = [
   {

@@ -9,9 +9,9 @@ import {
     Image,
 } from '@chakra-ui/react';
 import { FaGithub} from 'react-icons/fa';
-import YoutubeIcon from '../assets/youtube-color-icon.png';
-import InstagramIcon from '../assets/instagram-color-icon.svg';
-import LinkedinIcon from '../assets/linkedin-app-icon.svg';
+import YoutubeIcon from '../assets/Social media icons/youtube-color-icon.png';
+import InstagramIcon from '../assets/Social media icons/instagram-color-icon.svg';
+import LinkedinIcon from '../assets/Social media icons/linkedin-app-icon.svg';
 
 export default function Footer() {
 
