@@ -54,6 +54,7 @@ const Navbar = () => {
                     size="lg"
                     borderRadius={"full"}
                     aria-label="Toggle Navigation"
+                    _active={{ bg: "none" }}
                 />
             </Box>
             <Box
@@ -206,7 +207,6 @@ const Navbar = () => {
                     </AnchorLink>
                     <Text onClick={handleResumeDownload} p={2}
                         fontWeight={"bold"}
-                        color="96EFFF"
                         _hover={{
                             textDecoration: 'none',
                             borderBottom: '2px',
@@ -222,6 +222,7 @@ const Navbar = () => {
                 onClick={toggleColorMode}
                 variant="ghost"
                 size="md"
+                _hover={{ bg: '#96EFFF' }}
             />
         </Flex>
     );

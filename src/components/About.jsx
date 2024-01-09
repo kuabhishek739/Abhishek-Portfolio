@@ -20,6 +20,7 @@ const About = () => {
                     <Text
                         fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}
                         fontWeight={"bold"}
+                        textShadow={"0 0 15px #7b66ff"}
                     >ABOUT ME</Text>
                     <Box h={1} w={"5%"} margin={"auto"} bg={"#7b66ff"} borderRadius={"full"} mb={5}></Box>
                     <br />
@@ -46,6 +47,10 @@ const About = () => {
                     <AnchorLink href="#contact">
                         <Button
                             mt={8} bg={"#7B66FF"}
+                            _hover={{
+                                transform: "scale(1.1)",
+                                boxShadow: "0 0 10px gray",
+                            }}
                         >Contact Me</Button>
                     </AnchorLink>
                 </Box>

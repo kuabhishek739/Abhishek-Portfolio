@@ -5,9 +5,13 @@ import {
     Link,
     IconButton,
     Spacer,
-    HStack
+    HStack,
+    Image,
 } from '@chakra-ui/react';
-import { FaGithub, FaLinkedin, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaGithub} from 'react-icons/fa';
+import YoutubeIcon from '../assets/youtube-color-icon.png';
+import InstagramIcon from '../assets/instagram-color-icon.svg';
+import LinkedinIcon from '../assets/linkedin-app-icon.svg';
 
 export default function Footer() {
 
@@ -28,7 +32,7 @@ export default function Footer() {
                     <Box
                         maxWidth={"40%"}>
                         <Text
-                            fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}>ABHISHEK</Text>
+                            fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }} textShadow={"0 0 15px gray"}>ABHISHEK</Text>
                         <Text>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</Text>
                     </Box>
                     <Spacer />
@@ -50,38 +54,33 @@ export default function Footer() {
                                     variant="ghost"
                                     size="sm"
                                     color={"white"}
-                                    _hover={{ color: "#7B66FF", transform: "scale(1.1)" }}
+                                    _hover={{ transform: "scale(1.1)" }}
                                 />
                             </Link>
                             <Link href="https://www.linkedin.com/in/abhishek-3526011b5/">
-                                <IconButton
-                                    as={FaLinkedin}
-                                    aria-label="LinkedIn"
-                                    variant="ghost"
-                                    size="sm"
-                                    color={"white"}
-                                    _hover={{ color: "#7B66FF", transform: "scale(1.1)" }}
-                                />
+                                <Image
+                                src={LinkedinIcon}
+                                alt="Linkedin"
+                                boxSize="2em"
+                                _hover={{ transform: "scale(1.1)" }}
+                            />
                             </Link>
 
                             <Link href="https://www.instagram.com/kuabhishek739/">
-                                <IconButton
-                                    as={FaInstagram}
-                                    aria-label="Instagram"
-                                    variant="ghost"
-                                    size="sm"
-                                    color={"white"}
-                                    _hover={{ color: "#7B66FF", transform: "scale(1.1)" }}
+                                <Image
+                                    src={InstagramIcon}
+                                    alt="Instagram"
+                                    boxSize="2em"
+                                    _hover={{ transform: "scale(1.1)" }}
                                 />
                             </Link>
+
                             <Link href="https://www.youtube.com/@ezeecode9327">
-                                <IconButton
-                                    as={FaYoutube}
-                                    aria-label="Youtube"
-                                    variant="ghost"
-                                    size="sm"
-                                    color={"white"}
-                                    _hover={{ color: "#7B66FF", transform: "scale(1.1)" }}
+                                <Image
+                                    src={YoutubeIcon}
+                                    alt="Youtube"
+                                    boxSize="2.5em"
+                                    _hover={{ transform: "scale(1.1)" }}
                                 />
                             </Link>
                         </HStack>

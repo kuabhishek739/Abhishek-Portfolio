@@ -30,12 +30,14 @@ export default function GithubCalender() {
         <Text
           fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}
           fontWeight={"bold"}
+          textShadow={"0 0 15px #7b66ff"}
         >GitHub Streak</Text>
         <Box h={1} w={"5%"} margin={"auto"} bg={"#7b66ff"} borderRadius={"full"} mb={5}></Box>
         <br />
       </Box>
       <Box
         border="3px solid #7B66FF"
+        boxShadow={"0 0 10px #7B66FF"}
         borderTopLeftRadius="20px"
         borderBottomRightRadius="20px"
         overflow="hidden"
@@ -51,6 +53,7 @@ export default function GithubCalender() {
       </Box>
       <Box
         border="3px solid #7B66FF"
+        boxShadow={"0 0 10px #7B66FF"}
         borderTopLeftRadius="20px"
         borderBottomRightRadius="20px"
         overflow="hidden"
@@ -65,6 +68,7 @@ export default function GithubCalender() {
       </Box>
       <Box
         border="3px solid #7B66FF"
+        boxShadow={"0 0 10px #7B66FF"}
         borderTopLeftRadius="20px"
         borderBottomRightRadius="20px"
         overflow="hidden"
@@ -79,6 +83,7 @@ export default function GithubCalender() {
       </Box>
       <Box
         border="3px solid #7B66FF"
+        boxShadow={"0 0 10px #7B66FF"}
         borderTopLeftRadius="20px"
         borderBottomRightRadius="20px"
         overflow="hidden"

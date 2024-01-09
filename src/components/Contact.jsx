@@ -29,6 +29,7 @@ const Contact = () => {
                     <Text
                         fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}
                         fontWeight={"bold"}
+                        textShadow={"0 0 15px #7b66ff"}
                     >Contact Me</Text>
                     <Box h={1} w={"5%"} margin={"auto"} bg={"#7b66ff"} borderRadius={"full"} mb={5}></Box>
                     <br />
@@ -61,7 +62,10 @@ const Contact = () => {
                             <FormLabel fontSize={"12px"}>MESSAGE</FormLabel>
                             <Textarea placeholder='Type your message' h={200} resize="vertical" />
                         </FormControl>
-                        <Button mt={8} bg={"#7B66FF"}>Submit</Button>
+                        <Button mt={8} bg={"#7B66FF"} _hover={{
+                            transform: "scale(1.03)",
+                            boxShadow: "0 0 10px gray",
+                        }}>Submit</Button>
                     </Stack>
                 </Box>
             </Box>

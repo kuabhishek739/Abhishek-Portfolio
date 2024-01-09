@@ -1,7 +1,15 @@
 import React from 'react'
-import { FaHtml5, FaCss3Alt, FaJs, FaGit, FaPython, FaReact } from 'react-icons/fa';
-import { Flex, Box, Text, VStack } from '@chakra-ui/react';
+import { Flex, Box, Text, Image } from '@chakra-ui/react';
 import { useColorMode } from '@chakra-ui/color-mode'
+import cssIcon from '../assets/Skills icons/css-icon.svg'
+import jsIcon from '../assets/Skills icons/javascript-icon.svg'
+import pythonIcon from '../assets/Skills icons/python-icon.svg'
+import reactIcon from '../assets/Skills icons/react-js-icon.svg'
+import gitIcon from '../assets/Skills icons/git-icon.svg'
+import htmlIcon from '../assets/Skills icons/html-icon.svg'
+import mongodbIcon from '../assets/Skills icons/mongodb-icon.svg'
+import nodejsIcon from '../assets/Skills icons/node-js-icon.svg'
+
 const Skills = () => {
     const { colorMode } = useColorMode();
     const bgColor = colorMode === 'dark' ? "#3d3d3d" : "#ffffff";
@@ -32,6 +40,7 @@ const Skills = () => {
                 <Text
                     fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}
                     fontWeight={"bold"}
+                    textShadow={"0 0 15px #7b66ff"}
                 >My Skills</Text>
                 <Box h={1} w={"5%"} margin={"auto"} bg={"#7b66ff"} borderRadius={"full"} mb={5}></Box>
                 <br />
@@ -43,28 +52,36 @@ const Skills = () => {
                     alignItems={"center"} >
 
                     <Box {...skillBoxStyle}>
-                        <FaHtml5 size={"50%"} />
+                        <Image src={htmlIcon} height={"50%"} />
                         <Text>HTML</Text>
                     </Box>
                     <Box {...skillBoxStyle}>
-                        <FaCss3Alt size={"50%"} />
+                        <Image src={cssIcon} height={"50%"} />
                         <Text>CSS</Text>
                     </Box>
                     <Box {...skillBoxStyle}>
-                        <FaJs size={"50%"} />
+                        <Image src={jsIcon} height={"50%"} />
                         <Text>JavaScript</Text>
                     </Box>
                     <Box {...skillBoxStyle}>
-                        <FaGit size={"50%"} />
+                        <Image src={gitIcon} height={"50%"} />
                         <Text>Git</Text>
                     </Box>
                     <Box {...skillBoxStyle}>
-                        <FaReact size={"50%"} />
+                        <Image src={reactIcon} height={"50%"} />
                         <Text>React</Text>
                     </Box>
                     <Box {...skillBoxStyle}>
-                        <FaPython size={"50%"} />
+                        <Image src={pythonIcon} height={"50%"} />
                         <Text>Python</Text>
+                    </Box>
+                    <Box {...skillBoxStyle}>
+                        <Image src={mongodbIcon} height={"50%"} />
+                        <Text>MongoDB</Text>
+                    </Box>
+                    <Box {...skillBoxStyle}>
+                        <Image src={nodejsIcon} height={"50%"} />
+                        <Text>Node</Text>
                     </Box>
                 </Flex>
             </Box>

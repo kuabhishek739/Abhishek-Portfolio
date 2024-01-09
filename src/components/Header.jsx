@@ -95,8 +95,8 @@ function Header() {
                         textAlign={"center"}
                         margin={{ sm: "auto", md: "none", lg: "none" }}
                     >
-                        <Text fontSize={{ base: "3xl", md: "3xl", lg: "5xl" }} color={"white"} fontWeight={"bold"}>HEY, I'M</Text>
-                        <Text fontSize={{ base: "3xl", md: "3xl", lg: "5xl" }} color={"white"} fontWeight={"bold"}>
+                        <Text fontSize={{ base: "3xl", md: "3xl", lg: "5xl" }} color={"white"} fontWeight={"bold"} textShadow={"0 0 15px #7b66ff"}>HEY, I'M</Text>
+                        <Text fontSize={{ base: "3xl", md: "3xl", lg: "5xl" }} color={"white"} fontWeight={"bold"} textShadow={"0 0 15px #7b66ff"}>
                             <Typewriter
                                 options={{
                                     strings: ['ABHISHEK', 'CODER', 'WEB DEVELOPER'],
@@ -115,6 +115,11 @@ function Header() {
                                 mt={8}
                                 bg={"#7B66FF"}
                                 color={"white"}
+                                _hover={{
+                                    transform: "scale(1.1)",
+                                    bg: "#343432",
+                                    boxShadow: "0 0 10px gray",
+                                }}
                             >Contact Me</Button>
                         </AnchorLink>
                     </Box>
