@@ -124,7 +124,7 @@ function Header() {
                         </AnchorLink>
                     </Box>
                 </Box>
-                <Box mt={"10%"}>
+                <Box pt={"20%"}>
                     <LordIconComponent />
                 </Box>
             </Stack >

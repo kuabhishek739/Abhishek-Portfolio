@@ -15,14 +15,14 @@ const About = () => {
                     textAlign={"center"}
                     maxW={"80%"}
                     margin={"auto"}
-                    pt={150}
+                    pt={100}
                 >
                     <Text
                         fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}
                         fontWeight={"bold"}
                         textShadow={"0 0 15px #7b66ff"}
                     >ABOUT ME</Text>
-                    <Box h={1} w={"5%"} margin={"auto"} bg={"#7b66ff"} borderRadius={"full"} mb={5}></Box>
+                    <Box h={1} w={"30%"} margin={"auto"} bg={"#7b66ff"} borderRadius={"full"} mb={5}></Box>
                     <br />
                     <Text fontSize={{ sm: "l", md: "l", lg: "xl" }}
                     >Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</Text>

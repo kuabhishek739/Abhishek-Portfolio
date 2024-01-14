@@ -31,7 +31,7 @@ const Contact = () => {
                         fontWeight={"bold"}
                         textShadow={"0 0 15px #7b66ff"}
                     >Contact Me</Text>
-                    <Box h={1} w={"5%"} margin={"auto"} bg={"#7b66ff"} borderRadius={"full"} mb={5}></Box>
+                    <Box h={1} w={"30%"} margin={"auto"} bg={"#7b66ff"} borderRadius={"full"} mb={5}></Box>
                     <br />
                 </Box>
 

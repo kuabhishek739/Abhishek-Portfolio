@@ -26,20 +26,19 @@ export default function GithubCalender() {
   return (
     <Box maxW={"80%"} margin={"auto"} display={"flex"} flexDirection={"column"} alignItems={"center"} mt={50} mb={50}
       p={8}>
-      <Box>
-        <Text
+       <Text
           fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}
           fontWeight={"bold"}
           textShadow={"0 0 15px #7b66ff"}
         >GitHub Streak</Text>
-        <Box h={1} w={"5%"} margin={"auto"} bg={"#7b66ff"} borderRadius={"full"} mb={5}></Box>
+        <Box h={1} w={"40%"} margin={"auto"} bg={"#7b66ff"} borderRadius={"full"} mb={5}></Box>
         <br />
-      </Box>
       <Box
         border="3px solid #7B66FF"
         boxShadow={"0 0 10px #7B66FF"}
         borderTopLeftRadius="20px"
         borderBottomRightRadius="20px"
+        mt={10}
         overflow="hidden"
         width="fit-content"
         p={8}

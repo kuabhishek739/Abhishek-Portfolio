@@ -4,7 +4,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useColorMode } from '@chakra-ui/color-mode';
-
 import myhrs from '../assets/Projects/myhrs.Webp';
 import superheroresume from '../assets/Projects/superheroresume.Webp';
 import jioClone from '../assets/Projects/Jio-Clone.webp';
@@ -51,6 +50,7 @@ const Projects = () => {
     arrows: true,
     autoplay: true,
     autoplaySpeed: 3000,
+    pauseOnHover: false,
   };
 
   return (
@@ -59,7 +59,7 @@ const Projects = () => {
         <Text fontSize={{ base: '2xl', md: '4xl', lg: '5xl' }} fontWeight='bold' textShadow={"0 0 15px #7b66ff"}>
           My Projects
         </Text>
-        <Box h={1} w={'5%'} margin='auto' bg='#7b66ff' borderRadius='full' mb={5}></Box>
+        <Box h={1} w={'30%'} margin='auto' bg='#7b66ff' borderRadius='full' mb={5}></Box>
         <br />
         <Box w='80%' margin='auto'>
           <Slider {...settings}>
