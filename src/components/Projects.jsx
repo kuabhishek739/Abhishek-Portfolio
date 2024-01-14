@@ -4,7 +4,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useColorMode } from '@chakra-ui/color-mode';
-
 import myhrs from '../assets/Projects/myhrs.Webp';
 import superheroresume from '../assets/Projects/superheroresume.Webp';
 import jioClone from '../assets/Projects/Jio-Clone.webp';
@@ -51,6 +50,7 @@ const Projects = () => {
     arrows: true,
     autoplay: true,
     autoplaySpeed: 3000,
+    pauseOnHover: false,
   };
 
   return (

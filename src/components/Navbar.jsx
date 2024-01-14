@@ -11,10 +11,12 @@ import {
     Text,
     useColorMode,
     Slide,
+    Link,
 } from '@chakra-ui/react';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from '@chakra-ui/icons';
 import myImg from '../assets/Image.Webp';
+
 
 const handleResumeDownload = () => {
     const googleDriveFileDirectDownloadUrl = 'https://drive.usercontent.google.com/download?id=1zFj7XKeTXrgTSen7sifCjN9noS9ulSOU&export=download&authuser=0&confirm=t&uuid=f709ff31-787d-46f1-b77b-41e3a331ef02&at=APZUnTUGT1VLcJ81QztWFzj7cmZp:1703152097648';
@@ -42,9 +44,11 @@ const Navbar = () => {
                 _hover={{ transform: "scale(1.04)", cursor: "pointer" }} >
                 <Image src={myImg}></Image>
             </Box>
-            <Text fontSize="xl" fontWeight="bold" mr={4} _hover={{ transform: "scale(1.1)", cursor: "pointer" }} display={{ base: 'none', sm: 'block', md: 'block' }}>
-                ABHISHEK
-            </Text>
+            <AnchorLink href="#header">
+                <Text fontSize="xl" fontWeight="bold" mr={4} _hover={{ transform: "scale(1.02)", cursor: "pointer" }} display={{ base: 'none', sm: 'block', md: 'block' }}>
+                    ABHISHEK
+                </Text>
+            </AnchorLink>
             <Box display={{ base: 'block', md: 'none' }}>
                 <IconButton
                     icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
