@@ -32,16 +32,20 @@ const Navbar = () => {
 
     return (
         <Flex bg="#7B66FF" p={4} align="center" position="sticky" top={0} zIndex="sticky">
-            <Box
-                w= "35px"
-                h= "35px"
-                mr={4}
-                _hover={{ transform: "scale(1.04)", cursor: "pointer" }} >
-                <Image src={Favicon}></Image>
-            </Box>
-            <Text fontSize="xl" fontWeight="bold" mr={4} _hover={{ transform: "scale(1.1)", cursor: "pointer" }} display={{ base: 'none', sm: 'block', md: 'block' }}>
-                ABHISHEK
-            </Text>
+            <AnchorLink href="#header">
+                <Box
+                    w="35px"
+                    h="35px"
+                    mr={4}
+                    _hover={{ transform: "scale(1.04)", cursor: "pointer" }} >
+                    <Image src={Favicon}></Image>
+                </Box>
+            </AnchorLink>
+            <AnchorLink href="#header">
+                <Text fontSize="xl" fontWeight="bold" mr={4} _hover={{ transform: "scale(1.02)", cursor: "pointer" }} display={{ base: 'none', sm: 'block', md: 'block' }}>
+                    ABHISHEK
+                </Text>
+            </AnchorLink>
             <Box
                 display={isBoxExpanded ? 'block' : 'none'}
                 position="absolute"
