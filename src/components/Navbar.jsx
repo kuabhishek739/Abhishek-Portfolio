@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from '@chakra-ui/icons';
-import myImg from '../assets/Image.Webp';
+import Favicon from '../assets/Favicon.svg';
 
 const handleResumeDownload = () => {
     const googleDriveFileDirectDownloadUrl = 'https://drive.usercontent.google.com/download?id=1zFj7XKeTXrgTSen7sifCjN9noS9ulSOU&export=download&authuser=0&confirm=t&uuid=f709ff31-787d-46f1-b77b-41e3a331ef02&at=APZUnTUGT1VLcJ81QztWFzj7cmZp:1703152097648';
@@ -33,29 +33,15 @@ const Navbar = () => {
     return (
         <Flex bg="#7B66FF" p={4} align="center" position="sticky" top={0} zIndex="sticky">
             <Box
-                w={{ base: "45px", md: "45px" }}
-                h={{ base: "45px", md: "45px" }}
-                borderRadius={"full"}
-                overflow={"hidden"}
-                bg={"white"}
+                w= "35px"
+                h= "35px"
                 mr={4}
                 _hover={{ transform: "scale(1.04)", cursor: "pointer" }} >
-                <Image src={myImg}></Image>
+                <Image src={Favicon}></Image>
             </Box>
             <Text fontSize="xl" fontWeight="bold" mr={4} _hover={{ transform: "scale(1.1)", cursor: "pointer" }} display={{ base: 'none', sm: 'block', md: 'block' }}>
                 ABHISHEK
             </Text>
-            <Box display={{ base: 'block', md: 'none' }}>
-                <IconButton
-                    icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-                    onClick={toggleBox}
-                    variant="ghost"
-                    size="lg"
-                    borderRadius={"full"}
-                    aria-label="Toggle Navigation"
-                    _active={{ bg: "none" }}
-                />
-            </Box>
             <Box
                 display={isBoxExpanded ? 'block' : 'none'}
                 position="absolute"
