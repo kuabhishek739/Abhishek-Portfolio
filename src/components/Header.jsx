@@ -10,6 +10,16 @@ import Typewriter from 'typewriter-effect';
 
 function Header() {
 
+    const [wave, setWave] = useState(false);
+
+    useEffect(() => {
+        const waveInterval = setInterval(() => {
+            setWave(true);
+            setTimeout(() => setWave(false), 1000);
+        }, 2000);
+        return () => clearInterval(waveInterval);
+    }, []);
+
     const { colorMode } = useColorMode();
     const isDark = colorMode === "dark";
 
@@ -95,7 +105,7 @@ function Header() {
                         textAlign={"center"}
                         margin={{ sm: "auto", md: "none", lg: "none" }}
                     >
-                        <Text fontSize={{ base: "3xl", md: "3xl", lg: "5xl" }} color={"white"} fontWeight={"bold"} textShadow={"0 0 15px #7b66ff"}>HEY, I'M</Text>
+                        <Text fontSize={{ base: "3xl", md: "3xl", lg: "5xl" }} color={"white"} fontWeight={"bold"} textShadow={"0 0 15px #7b66ff"}>HEY <span className={wave ? 'wave' : ''}>👋</span> , I'M</Text>
                         <Text fontSize={{ base: "3xl", md: "3xl", lg: "5xl" }} color={"white"} fontWeight={"bold"} textShadow={"0 0 15px #7b66ff"}>
                             <Typewriter
                                 options={{

@@ -9,6 +9,7 @@ import gitIcon from '../assets/Skills icons/git-icon.svg'
 import htmlIcon from '../assets/Skills icons/html-icon.svg'
 import mongodbIcon from '../assets/Skills icons/mongodb-icon.svg'
 import nodejsIcon from '../assets/Skills icons/node-js-icon.svg'
+import { motion } from 'framer-motion';
 
 const Skills = () => {
     const { colorMode } = useColorMode();
@@ -25,10 +26,14 @@ const Skills = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        _hover: {
-            transform: 'scale(1.01)'
-        },
-        justifyContent: 'center'
+        justifyContent: 'center',
+        as: motion.div,
+        whileHover: { scale: 0.8, rotate: 10, borderRadius: "50%" },
+        whileTap: {
+            scale: 0.8,
+            rotate: 10,
+            borderRadius: "100%"
+        }
     };
     return (
         <section id='skills'>

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import {
     Box,
     Flex,
@@ -29,9 +30,27 @@ const Navbar = () => {
     const toggleBox = () => {
         setIsBoxExpanded(!isBoxExpanded);
     };
+    const [scrollProgress, setScrollProgress] = useState(0);
+
+    const handleScroll = () => {
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+
+        const scrollPercentage = (scrollY / (documentHeight - windowHeight)) * 100;
+        setScrollProgress(scrollPercentage);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
 
     return (
-        <Flex bg="#7B66FF" p={4} align="center" position="sticky" top={0} zIndex="sticky">
+        <Flex bg="#7B66FF" p={4} align="center" position="sticky" top={0} zIndex="sticky" boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)">
             <AnchorLink href="#header">
                 <Box
                     w="35px"
@@ -225,6 +244,7 @@ const Navbar = () => {
                     _active={{ bg: "none" }}
                 />
             </Box>
+            <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }} />
         </Flex>
     );
 };

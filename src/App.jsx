@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import GithubCalender from './components/GitHubStats';
 import React from 'react';
+import './App.css';
 const App = () => {
   return (
     <ChakraProvider>
@@ -21,7 +22,6 @@ const App = () => {
         <GithubCalender />
         <Contact />
         <Footer />
-
       </BrowserRouter>
     </ChakraProvider>
   );
