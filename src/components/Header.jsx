@@ -1,11 +1,11 @@
-import { Button, Link, IconButton, Stack, Box, Text, VStack, Image, Circle } from '@chakra-ui/react';
+import { Button, Link, IconButton, Stack, Box, Text, VStack } from '@chakra-ui/react';
 import { useColorMode } from '@chakra-ui/color-mode'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
 import React, { useState, useEffect } from 'react'
 import LordIconComponent from './LordIconComponent';
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import BgImage from '../assets/Vscode.Webp'
+import BgImage from '../assets/Vscode.webp';
 import Typewriter from 'typewriter-effect';
 
 function Header() {

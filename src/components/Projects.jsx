@@ -4,8 +4,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useColorMode } from '@chakra-ui/color-mode';
-import myhrs from '../assets/Projects/myhrs.Webp';
-import superheroresume from '../assets/Projects/superheroresume.Webp';
+import myhrs from '../assets/Projects/myhrs.webp';
+import superheroresume from '../assets/Projects/superheroresume.webp';
 import jioClone from '../assets/Projects/Jio-Clone.webp';
 
 const projectsData = [

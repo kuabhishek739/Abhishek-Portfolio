@@ -18,6 +18,7 @@ const Skills = () => {
         width: ['100%', 'calc(50% - 10px)', 'calc(33.33% - 10px)'],
         height: '150px',
         textAlign: 'center',
+        p: 2,
         my: 3,
         mx: 2,
         border: '2px',
@@ -28,7 +29,7 @@ const Skills = () => {
         alignItems: 'center',
         justifyContent: 'center',
         as: motion.div,
-        whileHover: { scale: 0.8, rotate: 10, borderRadius: "50%" },
+        whileHover: { scale: 0.8, rotate: 3, borderRadius: "100%" },
         whileTap: {
             scale: 0.8,
             rotate: 10,
