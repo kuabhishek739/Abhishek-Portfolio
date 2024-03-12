@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors'); 
+const dotenv = require('dotenv').config();
 
 const app = express();
 
@@ -10,8 +11,11 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
+// Define database connection
+uri = process.env.URI;
+
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/contactForm');
+mongoose.connect(uri);
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
