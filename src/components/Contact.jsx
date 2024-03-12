@@ -10,10 +10,46 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react'
 import { useColorMode } from '@chakra-ui/color-mode'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios';
 const Contact = () => {
     const { colorMode } = useColorMode();
     const bgColor = colorMode === 'dark' ? "#3d3d3d" : "#d5d5d5";
+    const [formData, setFormData] = useState({
+        fullName: '',
+        email: '',
+        message: ''
+    });
+    const [showPopup, setShowPopup] = useState(false);
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+      };
+
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+          await axios.post('http://localhost:5000/api/contact', formData);
+          // Show the popup
+          setShowPopup(true);
+          // Clear form data
+          setFormData({ fullName: '', email: '', message: '' });
+        } catch (error) {
+          console.error(error);
+        }
+      };
+
+    useEffect(() => {
+        let timer;
+        if (showPopup) {
+            timer = setTimeout(() => {
+                setShowPopup(false);
+            }, 3000);
+        }
+        return () => clearTimeout(timer);
+    }, [showPopup]);
+
+    // console.log(formData);
 
     return (
         <section id='contact'>
@@ -44,31 +80,49 @@ const Contact = () => {
                     borderRadius="20px"
                     overflow="hidden"
                 >
-
                     <Stack spacing={4}>
                         <Box
                             fontSize={"20px"}
                             fontWeight={"bold"}>Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
                         </Box>
-                        <FormControl id="fullName">
-                            <FormLabel fontSize={"13px"}>NAME</FormLabel>
-                            <Input placeholder='Full Name' type="text" />
-                        </FormControl>
-                        <FormControl id="email">
-                            <FormLabel fontSize={"12px"}>EMAIL</FormLabel>
-                            <Input placeholder='Email' type="email" />
-                        </FormControl>
-                        <FormControl id="message">
-                            <FormLabel fontSize={"12px"}>MESSAGE</FormLabel>
-                            <Textarea placeholder='Type your message' h={200} resize="vertical" />
-                        </FormControl>
-                        <Button mt={8} bg={"#7B66FF"} _hover={{
-                            transform: "scale(1.03)",
-                            boxShadow: "0 0 10px gray",
-                        }}>Submit</Button>
+                        <form onSubmit={handleSubmit}>
+                            <FormControl id="fullName">
+                                <FormLabel fontSize={"13px"}>NAME</FormLabel>
+                                <Input placeholder='Full Name' type="text"  name="fullName" value={formData.fullName} onChange={handleChange} />
+                            </FormControl>
+                            <br />
+                            <FormControl id="email">
+                                <FormLabel fontSize={"12px"}>EMAIL</FormLabel>
+                                <Input placeholder='Email' type="email" name="email" value={formData.email} onChange={handleChange} />
+                            </FormControl>
+                            <br />
+                            <FormControl id="message">
+                                <FormLabel fontSize={"12px"}>MESSAGE</FormLabel>
+                                <Textarea placeholder='Type your message' h={200} resize="vertical" name="message" value={formData.message} onChange={handleChange} />
+                            </FormControl>
+                            <Button mt={8} bg={"#7B66FF"} _hover={{
+                                transform: "scale(1.03)",
+                                boxShadow: "0 0 10px gray",
+                            }} type="submit">Submit</Button>
+                        </form>
                     </Stack>
                 </Box>
             </Box>
+            {showPopup && (
+                <Box
+                    position="fixed"
+                    top={0}
+                    left="50%"
+                    transform="translateX(-50%)"
+                    bg={colorMode === 'dark' ? "rgba(0,0,0,0.8)" : "rgba(255,255,255,0.8)"}
+                    color={colorMode === 'dark' ? "white" : "black"}
+                    p={4}
+                    borderRadius="md"
+                    zIndex={9999}
+                >
+                    <Text>Thank you! We will contact you soon.</Text>
+                </Box>
+            )}
         </section>
     )
 
