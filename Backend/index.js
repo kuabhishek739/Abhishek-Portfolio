@@ -32,6 +32,11 @@ const contactSchema = new mongoose.Schema({
 const Contact = mongoose.model('Contact', contactSchema);
 
 // Routes
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+})
+
 app.post('/api/contact', async (req, res) => {
     const { fullName, email, message } = req.body;
     const contact = new Contact({ fullName, email, message });
