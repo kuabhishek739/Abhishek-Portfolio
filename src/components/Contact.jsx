@@ -29,7 +29,7 @@ const Contact = () => {
       const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          await axios.post('http://localhost:5000/api/contact', formData);
+          await axios.post('https://abhishek-portfolio-backend.vercel.app/api/contact', formData);
           // Show the popup
           setShowPopup(true);
           // Clear form data
