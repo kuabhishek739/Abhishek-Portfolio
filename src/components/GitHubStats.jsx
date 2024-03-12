@@ -47,7 +47,7 @@ export default function GithubCalender() {
           className="react-activity-calendar"
           color="skyblue"
           username="kuabhishek739"
-          year={2023}
+          year={new Date().getFullYear()}
         />
       </Box>
       <Box

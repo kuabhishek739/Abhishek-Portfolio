@@ -9,6 +9,7 @@ import gitIcon from '../assets/Skills icons/git-icon.svg'
 import htmlIcon from '../assets/Skills icons/html-icon.svg'
 import mongodbIcon from '../assets/Skills icons/mongodb-icon.svg'
 import nodejsIcon from '../assets/Skills icons/node-js-icon.svg'
+import mysqlIcon from '../assets/Skills icons/mysql-icon.svg'
 import { motion } from 'framer-motion';
 
 const Skills = () => {
@@ -50,6 +51,13 @@ const Skills = () => {
                 >My Skills</Text>
                 <Box h={1} w={"20%"} margin={"auto"} bg={"#7b66ff"} borderRadius={"full"} mb={5}></Box>
                 <br />
+                <Text
+                    fontSize={{ base: "2xl", md: "2xl", lg: "3xl" }}
+                    fontWeight={"bold"}
+                    color={"7b66ff"}
+                    textShadow={"0 0 15px #7b66ff"}
+                >Languages & Frameworks</Text>
+                <br />
                 <Flex
                     maxW={{ base: "80%", md: "60%", lg: "60%" }}
                     wrap={"wrap"}
@@ -69,10 +77,7 @@ const Skills = () => {
                         <Image src={jsIcon} height={"50%"} />
                         <Text>JavaScript</Text>
                     </Box>
-                    <Box {...skillBoxStyle}>
-                        <Image src={gitIcon} height={"50%"} />
-                        <Text>Git</Text>
-                    </Box>
+
                     <Box {...skillBoxStyle}>
                         <Image src={reactIcon} height={"50%"} />
                         <Text>React</Text>
@@ -81,13 +86,37 @@ const Skills = () => {
                         <Image src={pythonIcon} height={"50%"} />
                         <Text>Python</Text>
                     </Box>
+                </Flex>
+                <br />
+                <Text
+                    fontSize={{ base: "2xl", md: "2xl", lg: "3xl" }}
+                    fontWeight={"bold"}
+                    color={"7b66ff"}
+                    textShadow={"0 0 15px #7b66ff"}
+                >Tools and Techs</Text>
+                <br />
+                <Flex
+                    maxW={{ base: "80%", md: "60%", lg: "60%" }}
+                    wrap={"wrap"}
+                    margin={"auto"}
+                    justifyContent={"center"}
+                    alignItems={"center"}>
+
+                    <Box {...skillBoxStyle}>
+                        <Image src={nodejsIcon} height={"50%"} />
+                        <Text>Node</Text>
+                    </Box>
+                    <Box {...skillBoxStyle}>
+                        <Image src={gitIcon} height={"50%"} />
+                        <Text>Git</Text>
+                    </Box>
                     <Box {...skillBoxStyle}>
                         <Image src={mongodbIcon} height={"50%"} />
                         <Text>MongoDB</Text>
                     </Box>
                     <Box {...skillBoxStyle}>
-                        <Image src={nodejsIcon} height={"50%"} />
-                        <Text>Node</Text>
+                        <Image src={mysqlIcon} height={"50%"} />
+                        <Text>MySQL</Text>
                     </Box>
                 </Flex>
             </Box>
