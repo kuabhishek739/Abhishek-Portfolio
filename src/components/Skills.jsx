@@ -10,6 +10,8 @@ import htmlIcon from '../assets/Skills icons/html-icon.svg'
 import mongodbIcon from '../assets/Skills icons/mongodb-icon.svg'
 import nodejsIcon from '../assets/Skills icons/node-js-icon.svg'
 import mysqlIcon from '../assets/Skills icons/mysql-icon.svg'
+import nextjsIcon from '../assets/Skills icons/nextjs.svg'
+import tailwindIcon from '../assets/Skills icons/tailwind-icon.svg'
 import { motion } from 'framer-motion';
 
 const Skills = () => {
@@ -83,8 +85,16 @@ const Skills = () => {
                         <Text>React</Text>
                     </Box>
                     <Box {...skillBoxStyle}>
+                        <Image src={nextjsIcon} height={"50%"} />
+                        <Text>Nextjs</Text>
+                    </Box>
+                    <Box {...skillBoxStyle}>
                         <Image src={pythonIcon} height={"50%"} />
                         <Text>Python</Text>
+                    </Box>
+                    <Box {...skillBoxStyle}>
+                        <Image src={tailwindIcon} height={"50%"} />
+                        <Text>Tailwind CSS</Text>
                     </Box>
                 </Flex>
                 <br />

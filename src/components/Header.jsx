@@ -109,7 +109,7 @@ function Header() {
                         <Text fontSize={{ base: "3xl", md: "3xl", lg: "5xl" }} color={"white"} fontWeight={"bold"} textShadow={"0 0 15px #7b66ff"}>
                             <Typewriter
                                 options={{
-                                    strings: ['ABHISHEK', 'CODER', 'WEB DEVELOPER'],
+                                    strings: ['ABHISHEK', 'CODER', 'WEB DEVELOPER', 'ENTERPRENEUR'],
                                     autoStart: true,
                                     loop: true,
                                     delay: 100,

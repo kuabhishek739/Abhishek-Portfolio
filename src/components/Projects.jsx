@@ -7,8 +7,19 @@ import { useColorMode } from '@chakra-ui/color-mode';
 import myhrs from '../assets/Projects/myhrs.webp';
 import superheroresume from '../assets/Projects/superheroresume.webp';
 import jioClone from '../assets/Projects/Jio-Clone.webp';
+import agreement_xpress from '../assets/Projects/agreement-xpress.webp';
+
 
 const projectsData = [
+  {
+    key: 'agreementXpress',
+    imageSrc: agreement_xpress,
+    title: 'Agreement Xpress',
+    description:
+      'Agreement Xpress is a comprehensive business website that streamlines the creation and management of agreements. Built with React, Tailwind CSS, and Next.js, it features secure authentication via Google OAuth 2.0 and NextAuth, with advanced functionality powered by Google Cloud APIs. The backend is robust and scalable, ensuring efficient business operations.',
+    siteLink: 'https://www.agreementxpress.com/',
+    codeLink: '#',
+  },
   {
     key: 'myHours',
     imageSrc: myhrs,
@@ -35,8 +46,9 @@ const projectsData = [
       'I replicated the frontend interface of Jio.com using React and Chakra UI, demonstrating a responsive and visually engaging website mirroring the original design...',
     siteLink: 'https://jio-clone-site.vercel.app/',
     codeLink: 'https://github.com/kuabhishek739/My-Projects/tree/main/Jio-Site-Clone',
-  },
+  }
 ];
+
 
 const Projects = () => {
   const { colorMode } = useColorMode();
@@ -73,7 +85,7 @@ const Projects = () => {
                 alignItems='center'
                 maxW={{ base: '100%', md: '80%', lg: '80%' }}
               >
-                <Image src={project.imageSrc} alt={project.title} borderRadius={"0.8rem"}/>
+                <Image src={project.imageSrc} alt={project.title} borderRadius={"0.8rem"} />
                 <br />
                 <Text fontWeight='bold' fontSize='2xl'>
                   {project.title}
